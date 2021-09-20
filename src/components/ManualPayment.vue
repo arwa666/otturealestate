@@ -29,7 +29,6 @@
                         >
                              <v-text-field 
                                 label="Property Name"
-                                reverse
                               ></v-text-field>
 
                               <v-select 
@@ -44,7 +43,6 @@
                         <v-text-field
                             label="Tenant Name"
                             required
-                            reverse
                         ></v-text-field>
 
                         <v-select 
@@ -53,12 +51,10 @@
 
                       <v-text-field 
                         label="Year"
-                        reverse
                       ></v-text-field>
                       
                       <v-text-field 
                         label="Price"
-                        reverse
                       ></v-text-field>
 
                          </v-form> 
