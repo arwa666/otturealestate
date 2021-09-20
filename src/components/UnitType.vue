@@ -122,7 +122,7 @@
                           >SEARCH</v-btn
                         >
                         <v-btn
-                          color="primary"
+                          
                           flat
                           @click="menu = false"
                           class="re-gray-btn re-box-shadow"
@@ -141,7 +141,7 @@
                   hide-actions
                 >
                   <template v-slot:items="props">
-                    <td class="re-orange-color">{{ props.item.name }}</td>
+                    <td class="re-orange-color text-xs-left">{{ props.item.name }}</td>
                     <td class="text-xs-center"><div style="width: 150px; margin:0 auto">{{ props.item.address }}</div></td>
                     <td class="text-xs-center">{{ props.item.commercial }}</td>
                     <td class="text-xs-center">

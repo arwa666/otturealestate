@@ -151,10 +151,12 @@
                                             <v-radio
                                               label="Percentage"
                                               value="percentage"
+                                              color="grey darken-1"
                                             ></v-radio>
                                             <v-radio
                                               label="Fixed"
                                               value="fixed"
+                                              color="grey darken-1"
                                             ></v-radio>
                                           </v-radio-group>
                                         </v-flex>
@@ -245,10 +247,12 @@
                               <v-radio
                                 label="Percentage"
                                 value="percentage"
+                                color="grey darken-1"
                               ></v-radio>
                               <v-radio
                                 label="Fixed"
                                 value="fixed"
+                                color="grey darken-1"
                               ></v-radio> </v-radio-group
                           ></v-form>
                         </td>

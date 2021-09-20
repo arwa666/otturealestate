@@ -150,7 +150,7 @@
                           >SEARCH</v-btn
                         >
                         <v-btn
-                          color="primary"
+                          
                           flat
                           @click="menu = false"
                           class="re-gray-btn re-box-shadow"
