@@ -1,6 +1,6 @@
 <template>
   <v-app id="app">
-           <v-navigation-drawer value="true" v-model="drawer" fixed left app>
+           <v-navigation-drawer value="true" v-model="drawer" fixed right app>
         <v-list>
           <v-img
             lazy-src="https://delta.ottu.com/media/config/Ottu_1LH3qD1.png"
