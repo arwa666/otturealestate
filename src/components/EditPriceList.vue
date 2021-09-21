@@ -207,7 +207,7 @@
                   class="headline d-flex justify-space-between form-title"
                   primary-title
                 >
-                  <span class="text-start"> CONTRACT ID </span>
+                  <span class="text-start">EDIT PRICE</span>
                   <v-icon class="d-flex justify-end" @click="dialog = false">
                     close
                   </v-icon>
@@ -216,15 +216,21 @@
                 <v-card-text>
                   <v-list dense>
                     <v-list-tile>
+                      <v-list-tile-content>ID</v-list-tile-content>
+                      <v-list-tile-content class="align-end orange-c"
+                        >A1</v-list-tile-content
+                      >
+                    </v-list-tile>
+                    <v-list-tile>
                       <v-list-tile-content>Created</v-list-tile-content>
                       <v-list-tile-content class="align-end"
-                        >{{ units[index].created }}</v-list-tile-content
+                        >31/10/2021 13:30:25</v-list-tile-content
                       >
                     </v-list-tile>
                     <v-list-tile>
                       <v-list-tile-content>Initiator</v-list-tile-content>
                       <v-list-tile-content class="align-end orange-c"
-                        >{{ units[index].initiator }}</v-list-tile-content
+                        >username</v-list-tile-content
                       >
                     </v-list-tile>
                     <v-list-tile>
@@ -232,73 +238,73 @@
                       <v-list-tile-content
                         class="align-end"
                         :class="{ongoing:units[0].ongoing}"
-                        >{{ units[index].status }}</v-list-tile-content
+                        >Ongoing</v-list-tile-content
                       >
                     </v-list-tile>
                     <v-list-tile>
                       <v-list-tile-content>Property Name</v-list-tile-content>
                       <v-list-tile-content class="align-end"
-                        >{{ units[index].propertyName }}</v-list-tile-content
+                        >Mazaya</v-list-tile-content
                       >
                     </v-list-tile>
                     <v-list-tile>
                       <v-list-tile-content>Unit Number</v-list-tile-content>
                       <v-list-tile-content class="align-end"
-                        >{{ units[index].unitNumber }}</v-list-tile-content
+                        >12</v-list-tile-content
                       >
                     </v-list-tile>
                     <v-list-tile>
                       <v-list-tile-content>Unit Type</v-list-tile-content>
                       <v-list-tile-content class="align-end"
-                        >{{ units[index].unitType }}</v-list-tile-content
+                        >2 BDR</v-list-tile-content
                       >
                     </v-list-tile>
                     <v-list-tile>
                       <v-list-tile-content>Current Unit Amount</v-list-tile-content>
                       <v-list-tile-content class="align-end"
-                        >{{ units[index].currentUnitAmount }}</v-list-tile-content
+                        >200.000 KD</v-list-tile-content
                       >
                     </v-list-tile>
                     <v-list-tile>
                       <v-list-tile-content>Current Unit Discount</v-list-tile-content>
                       <v-list-tile-content class="align-end"
-                        >{{ units[index].currentUnitDiscount}}</v-list-tile-content
+                        >5</v-list-tile-content
                       >
                     </v-list-tile>
                     <v-list-tile>
                       <v-list-tile-content>Current Percentage / Fixed</v-list-tile-content>
                       <v-list-tile-content class="align-end"
-                        >{{ units[index].currentPer }}</v-list-tile-content
+                        >Fixed</v-list-tile-content
                       >
                     </v-list-tile>
                     <v-list-tile>
                         <v-list-tile-content>Current Unit Net Amount</v-list-tile-content>
                         <v-list-tile-content class="align-end"
-                          >{{ units[index].currentUnitNetAmount }}</v-list-tile-content
+                          >195.000 KD</v-list-tile-content
                         >
                       </v-list-tile>
                       <v-list-tile>
                         <v-list-tile-content> New Unit Amount</v-list-tile-content>
                         <v-list-tile-content class="align-end"
-                          >{{ units[index].newUnitAmount }}</v-list-tile-content
+                          >250.000 KD</v-list-tile-content
                         >
                       </v-list-tile>
                       <v-list-tile>
                         <v-list-tile-content>New Unit Discount</v-list-tile-content>
                         <v-list-tile-content class="align-end"
-                          >{{ units[index].newUnitDiscount }}</v-list-tile-content
+                          >3</v-list-tile-content
                         >
                       </v-list-tile>
                       <v-list-tile>
                         <v-list-tile-content> New Percentage / Fixed</v-list-tile-content>
                         <v-list-tile-content class="align-end"
-                          >{{ units[index].newPercentage }}</v-list-tile-content
+                          >Fixed</v-list-tile-content
                         >
                       </v-list-tile>
                       <v-list-tile>
                         <v-list-tile-content>New Unit Net Amount</v-list-tile-content>
                         <v-list-tile-content class="align-end"
-                          >{{ units[index].newUnitNetAmount }}</v-list-tile-content
+                          >247.000 KD</v-list-tile-content
                         >
                       </v-list-tile>
                   </v-list>

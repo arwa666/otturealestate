@@ -207,7 +207,7 @@
                 
                 >
                 <span class="text-start">
-                  CONTRACT ID
+                  RENEW CONTRACT
                 </span>
                 <v-icon class="d-flex justify-end"  @click="dialog = false">
                   close
@@ -221,48 +221,52 @@
                         
                         <v-list dense>
                           <v-list-tile>
-                            <v-list-tile-content>Tenant Name</v-list-tile-content>
-                            <v-list-tile-content class="align-end orange-c">{{ units[0].tenant }}</v-list-tile-content>
+                            <v-list-tile-content>ID</v-list-tile-content>
+                            <v-list-tile-content class="align-end orange-c">A1</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Created</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].created }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">21/08/2021 13:30:25</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Initiator</v-list-tile-content>
-                            <v-list-tile-content class="align-end orange-c">{{ units[0].initiator }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end orange-c">username</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Property Name</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].propertyName }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">Mazaya</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Unit Type</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].unitType }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">2 BDR</v-list-tile-content>
+                          </v-list-tile>
+                          <v-list-tile>
+                            <v-list-tile-content>Tenant Name</v-list-tile-content>
+                            <v-list-tile-content class="align-end orange-c">Someone</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content> Old Contract Start Date</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].oldStartDate }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">09/08/2021</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content> Old Contract End Date</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].oldEndDate }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">09/08/2021</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Old Amount</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].oldAmount }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">4000.000 KD</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Contract New Start Date</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].newStartDate }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">09/08/2021</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Contract New End Date</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].newEndDate }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">09/08/2021</v-list-tile-content>
                           </v-list-tile> 
                           <v-list-tile>
                             <v-list-tile-content> New Amount</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].newAmount }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">4000.000 KD</v-list-tile-content>
                           </v-list-tile> 
                         </v-list>
 

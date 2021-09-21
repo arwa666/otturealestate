@@ -52,6 +52,7 @@
                             <v-text-field
                               label="Unit Type Description"
                               required
+                              color="grey darken-1"
                             ></v-text-field>
                             <v-checkbox
                             label = "Is Commercial"

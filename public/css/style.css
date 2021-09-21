@@ -738,6 +738,10 @@ background: red !important;
 	.v-text-field--box input, .v-text-field--full-width input, .v-text-field--outline input {
 		margin-top: 4px;
 	}
+	.re-custom-controls{
+		display: flex;
+		justify-content: space-between;
+	}
 @media(max-width:600px){
 	.w-100 .v-input__slot{
 		width: 100%;
@@ -762,6 +766,14 @@ background: red !important;
 .width100{
 	width:100%
 }
+/* .v-tabs__item{
+    background: rgb(255, 255, 255)!important;
+    border-radius: 10px!important;
+    -webkit-border-radius: 10px!important;
+    -moz-border-radius: 10px!important;
+    -ms-border-radius: 10px!important;
+    -o-border-radius: 10px!important;
+} */
 /*****************************End realestate new Pages********************************/
 @media(min-width:1298px){
 	/* .re-filter .v-menu__content{

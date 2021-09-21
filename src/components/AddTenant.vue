@@ -115,6 +115,7 @@
                                     <v-checkbox
                                     label="Married?"
                                     v-model="checked"
+                                     color="grey darken-1"
                                    ></v-checkbox>
                                
                                
