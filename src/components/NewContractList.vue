@@ -194,7 +194,7 @@
           <div class="text-xs-center">
             <v-dialog
               v-model="dialog"
-              width="500"
+              width="420"
             >
         
               <v-card>
@@ -442,3 +442,9 @@ computed: {
         },
 }
 </script>
+
+<style >
+ .v-dialog {
+   max-width: 420px!important;
+ }
+</style>

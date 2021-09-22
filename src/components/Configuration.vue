@@ -46,40 +46,6 @@
                     >
                       <v-card-text class="text-xs-center">
                         <v-layout>
-                          <!-- <v-data-table
-                            :headers="headers"
-                            :items="uploadedFiles"
-                            no-data-text=""
-                            hide-actions
-                            class="re-files-tab"
-                            style="width: 100%"
-                          >
-                            <template v-slot:items="props">
-                              <td class="text-xs-left">
-                                <v-layout>
-                                  <v-flex xs1>
-                                    <v-img
-                                      lazy-src="https://picsum.photos/id/11/10/6"
-                                      max-height="50"
-                                      max-width="50"
-                                      src="images/image.png"
-                                    ></v-img>
-                                  </v-flex>
-                                  <v-flex xs11>
-                                    <div>
-                                      <span>File Name: </span>
-                                      <span>{{ props.item.name }}</span>
-                                    </div>
-                                    <div>
-                                      <span>Size: </span>
-                                      <span>{{ props.item.size }}</span>
-                                    </div>
-                                  </v-flex>
-                                </v-layout>
-
-                              </td>
-                            </template>
-                          </v-data-table> -->
                           <v-list>
                             <template v-for="(item) in uploadedFiles">
                               <v-list-tile :key="item.header">
@@ -132,12 +98,13 @@
           </v-layout>
         </v-layout>
          <v-layout row wrap justify-center class="re-margin-t40">
-          <v-flex xs12 lg9>
+          <!-- <v-flex xs12 lg9 class="re-custom-position">
             <v-tabs
                 v-model="active"
                 color= "transparent"
                 dark
                 slider-color="#f57829"
+                :class = "{ theight:showTabs }"
               >
                 <v-tab
                   ripple
@@ -562,20 +529,41 @@
                   </v-card-text>
                 </v-card>
                 </v-tab-item>
-             </v-tabs>
-          </v-flex>
-         </v-layout>
-        <!-- <v-layout row wrap justify-center>
-          <v-flex xs12 lg9>
-            <v-expansion-panel class="re-margin-t40 re-advanced">
-              <v-expansion-panel-content v-for="(item,i) in 1" :key="i">
-                <template v-slot:header>
-                  <div>
-                    <h3>Advanced Settings</h3>
-                  </div>
-                </template>
-                <v-card>
-                  <v-card-text>
+
+            </v-tabs>
+            <v-btn @click="toggle"  dark class="hide-tabs-btns re-orangtbtn">
+              {{btnText}}
+            </v-btn>
+          </v-flex> -->
+          <v-flex xs12 lg9 class= "re-custom-position">
+              <v-expansion-panel  expand
+                    v-model="panel" class="content__panel">
+                  <v-expansion-panel-content
+                  >
+                    <template v-slot:header>
+                      <div></div>
+                    </template>
+                    <!-- <v-card> -->
+                      <!-- <v-card-text> -->
+                                    <v-tabs
+                v-model="active"
+                color= "transparent"
+                dark
+                slider-color="#f57829"
+                :class = "{ theight:showTabs }"
+              >
+                <v-tab
+                  ripple
+                >
+                  <h3>Advanced Settings</h3>
+                </v-tab>
+                <v-tab-item
+                >
+                  <v-card flat class="re-margin-t40">
+                    <v-card-title class="re-custom-controls">
+                        <h3>Advanced Settings</h3>
+                    </v-card-title>
+                    <v-card-text>
                     <v-text-field label="Default email"> </v-text-field>
                     <v-checkbox
                       label="Hide email"
@@ -592,72 +580,410 @@
                        color = "grey darken-1"
                     ></v-checkbox>
                   </v-card-text>
+                  </v-card>
+                </v-tab-item>
+                <v-tab
+                  ripple
+                >
+                 <h3>Terms & Conditions</h3>
+
+                </v-tab>
+                <v-tab-item
+                >
+                  <v-card flat class="re-margin-t40">
+                    <v-card-title class="re-custom-controls">
+                      <h3>Terms & Conditions</h3>
+                  </v-card-title>
+                   <v-card-text>
+                    <v-checkbox
+                    label="Terms & conditions [En]"
+                    v-model="checkbox1"
+                    class="re-gray-color"
+                    color = "grey darken-1"
+                  ></v-checkbox>
+                  <p class="re-margin-t40 re-gray-color re-padding-start7 text-start">
+                    Terms & conditions [En]
+                  </p>
+                  <editor
+                      api-key="no-api-key"
+                      :init="{
+                        height: 330,
+                        menubar: false,
+                        resize: false,
+                        plugins: [
+                          'advlist autolink lists link image charmap print preview anchor charmap emoticons ',
+                          'searchreplace visualblocks code fullscreen directionality',
+                          'insertdatetime media table paste code help wordcount'
+                        ],
+                        toolbar:[
+                        'cut copy paste newdocument remove | undo redo|link image table  charmap emoticons|fullscreen media',
+                        'bold italic strikethrough  |removeformat|indent outdent| blockquote|   alignleft aligncenter alignright alignjustify |ltr rtl', 
+                          'styleselect | formatselect| fontselect|fontsizeselect|forecolor backcolor|  ',
+                          
+                          ]
+                      }"
+                    />
+                    <p class="re-margin-t40 re-gray-color re-padding-start7 text-start">
+                        Terms & conditions [Ar]
+                    </p>
+                  <editor
+                    api-key="no-api-key"
+                    :init="{
+                      height: 330,
+                      menubar: false,
+                      resize: false,
+                      plugins: [
+                        'advlist autolink lists link image charmap print preview anchor charmap emoticons ',
+                        'searchreplace visualblocks code fullscreen directionality',
+                        'insertdatetime media table paste code help wordcount'
+                      ],
+                      toolbar:[
+                      'cut copy paste newdocument remove | undo redo|link image table  charmap emoticons|fullscreen media',
+                      'bold italic strikethrough  |removeformat|indent outdent| blockquote|   alignleft aligncenter alignright alignjustify |ltr rtl', 
+                        'styleselect | formatselect| fontselect|fontsizeselect|forecolor backcolor|  ',
+                        
+                        ]
+                    }"
+                  />
+                   </v-card-text>
+                  </v-card>
+                </v-tab-item>
+                <v-tab  ripple>
+                  <h3>Fields</h3>
+                </v-tab>
+                <v-tab-item>
+                <v-card class="re-margin-t40">
+                <v-card-title class="re-custom-controls">
+                  <h3>Fields</h3>
+                  <v-btn class="re-add-field">Add new field</v-btn>
+                </v-card-title>
+                  <v-card-text>
+                    <v-layout wrap>
+                      <v-flex sm6>
+                        <v-select :items="items1" label="Field Type" v></v-select>
+                      </v-flex>
+                      <v-flex sm6>
+                        <v-checkbox
+                          label="Required"
+                          v-model="checkbox2"
+                          class="re-gray-color re-required"
+                          color = "grey darken-1"
+                        ></v-checkbox>
+                      </v-flex>
+                    </v-layout>
+                    <v-layout wrap>
+                      <v-flex sm4>
+                        <v-checkbox
+                          label="Itinerary display"
+                          v-model="Itinerary"
+                          class="re-gray-color justify-start"
+                          color = "grey darken-1"
+                        ></v-checkbox>
+                        <p class="re-chec__p">Leoms iskb jdbvbj jsvhys sjbjd</p>
+                      </v-flex>
+                      <v-flex sm4>
+                        <div class="justify-center">
+                          <v-checkbox
+                            label="Custom detail field"
+                            v-model="custom"
+                            class="re-gray-color"
+                            color = "grey darken-1"
+                          ></v-checkbox>
+                          <p class="re-chec__p">Leoms iskb jdbvbj jsvhys sjbjd</p>
+                        </div>
+                      </v-flex>
+                      <v-flex sm4>
+                        <div class="re-c-style">
+                          <v-checkbox
+                            label="Is active"
+                            v-model="active"
+                            class="re-gray-color"
+                            color = "grey darken-1"
+                          ></v-checkbox>
+                          <p class="re-chec__p">Leoms iskb jdbvbj jsvhys sjbjd</p>
+                        </div>
+                      </v-flex>
+                    </v-layout>
+                    <v-layout>
+                      <v-select :items="items1" label="Validator" v></v-select>
+                    </v-layout>
+                    <v-layout wrap>
+                      <v-flex sm4>
+                        <v-checkbox
+                          label="Is Unit Type"
+                          v-model="isUnit"
+                          class="re-gray-color justify-start"
+                          color = "grey darken-1"
+                        ></v-checkbox>
+                        <p class="re-chec__p">Leoms iskb jdbvbj jsvhys sjbjd</p>
+                      </v-flex>
+                      <v-flex sm4>
+                        <div class="justify-center">
+                          <v-checkbox
+                            label="Is Property"
+                            v-model="isProperty"
+                            class="re-gray-color"
+                            color = "grey darken-1"
+                          ></v-checkbox>
+                          <p class="re-chec__p">Leoms iskb jdbvbj jsvhys sjbjd</p>
+                        </div>
+                      </v-flex>
+                      <v-flex sm4>
+                        <div class="re-c-style">
+                          <v-checkbox
+                            label="Is Tenant"
+                            v-model="isTenant"
+                            class="re-gray-color"
+                            color = "grey darken-1"
+                          ></v-checkbox>
+                          <p class="re-chec__p">Leoms iskb jdbvbj jsvhys sjbjd</p>
+                        </div>
+                      </v-flex>
+                    </v-layout>
+                    <v-layout>
+                      <v-select :items="items1" label="Field" v></v-select>
+                    </v-layout>
+                    <v-layout>
+                      <v-select :items="items1" label="Order" v></v-select>
+                    </v-layout>
+                    <v-layout>
+                      <v-text-field label = "Label(EN)"></v-text-field>
+                    </v-layout>
+                    <v-layout>
+                      <v-text-field label = "Label(AR)"></v-text-field>
+                    </v-layout>
+                    <v-layout>
+                      <v-text-field label = "Name"></v-text-field>
+                    </v-layout>
+                    <v-layout>
+                      <v-btn class="re-del-btn"> Delete Field </v-btn>
+                    </v-layout>
+                  </v-card-text>
                 </v-card>
-              </v-expansion-panel-content>
+                <v-card
+
+                class="re-v-sheet re-v-sheet2"
+              >
+                <v-card-text>
+                  <v-layout wrap>
+                    <v-flex sm6>
+                      <v-select :items="items1" label="Field Type"> </v-select>
+                    </v-flex>
+                    <v-flex sm6>
+                      <v-checkbox
+                        label="Required"
+                        v-model="required"
+                        class="re-gray-color re-required"
+                        color = "grey darken-1"
+                      ></v-checkbox>
+                    </v-flex>
+                  </v-layout>
+                  <v-layout wrap>
+                    <v-flex sm4>
+                      <v-checkbox
+                        label="Itinerary display"
+                        v-model="Itinerary"
+                        class="re-gray-color justify-start"
+                        color = "grey darken-1"
+                      ></v-checkbox>
+                      <p class="re-chec__p">Leoms iskb jdbvbj jsvhys sjbjd</p>
+                    </v-flex>
+                    <v-flex sm4>
+                      <div class="justify-center">
+                        <v-checkbox
+                          label="Custom detail field"
+                          v-model="custom"
+                          class="re-gray-color"
+                          color = "grey darken-1"
+                        ></v-checkbox>
+                        <p class="re-chec__p">Leoms iskb jdbvbj jsvhys sjbjd</p>
+                      </div>
+                    </v-flex>
+                    <v-flex sm4>
+                      <div class="re-c-style">
+                        <v-checkbox
+                          label="Is active"
+                          v-model="active"
+                          class="re-gray-color"
+                          color = "grey darken-1"
+                        ></v-checkbox>
+                        <p class="re-chec__p">Leoms iskb jdbvbj jsvhys sjbjd</p>
+                      </div>
+                    </v-flex>
+                  </v-layout>
+                  <v-layout>
+                    <v-select :items="items1" label="Validator"> </v-select>
+                  </v-layout>
+                  <v-layout wrap>
+                    <v-flex sm4>
+                      <v-checkbox
+                        label="Is Unit Type"
+                        v-model="isUnit1"
+                        class="re-gray-color justify-start"
+                        color = "grey darken-1"
+                      ></v-checkbox>
+                      <p class="re-chec__p">Leoms iskb jdbvbj jsvhys sjbjd</p>
+                    </v-flex>
+                    <v-flex sm4>
+                      <div class="justify-center">
+                        <v-checkbox
+                          label="Is Property"
+                          v-model="isProperty1"
+                          class="re-gray-color"
+                          color = "grey darken-1"
+                        ></v-checkbox>
+                        <p class="re-chec__p">Leoms iskb jdbvbj jsvhys sjbjd</p>
+                      </div>
+                    </v-flex>
+                    <v-flex sm4>
+                      <div class="re-c-style">
+                        <v-checkbox
+                          label="Is Tenant"
+                          v-model="isTenant1"
+                          class="re-gray-color"
+                          color = "grey darken-1"
+                        ></v-checkbox>
+                        <p class="re-chec__p">Leoms iskb jdbvbj jsvhys sjbjd</p>
+                      </div>
+                    </v-flex>
+                  </v-layout>
+                  <v-layout>
+                    <v-select :items="items1" label="Field"> </v-select>
+                  </v-layout>
+                  <v-layout>
+                    <v-select :items="items1" label="Order"> </v-select>
+                  </v-layout>
+                                      <v-layout>
+                      <v-text-field label = "Label(EN)"></v-text-field>
+                    </v-layout>
+                    <v-layout>
+                      <v-text-field label = "Label(AR)"></v-text-field>
+                    </v-layout>
+                    <v-layout>
+                      <v-text-field label = "Name"></v-text-field>
+                    </v-layout>
+                  <v-layout>
+                    <v-btn class="re-del-btn"> Delete Field </v-btn>
+                  </v-layout>
+                </v-card-text>
+                </v-card>
+                <v-card
+                  class="re-v-sheet re-v-sheet2"
+
+                >
+                  <v-card-text>
+                    <v-layout wrap>
+                      <v-flex sm6>
+                        <v-select :items="items1" label="Field Type"> </v-select>
+                      </v-flex>
+                      <v-flex sm6>
+                        <v-checkbox
+                          label="Required"
+                          v-model="required"
+                          class="re-gray-color re-required"
+                          color = "grey darken-1"
+                        ></v-checkbox>
+                      </v-flex>
+                    </v-layout>
+                    <v-layout wrap>
+                      <v-flex sm4>
+                        <v-checkbox
+                          label="Itinerary display"
+                          v-model="Itinerary"
+                          class="re-gray-color justify-start"
+                          color = "grey darken-1"
+                        ></v-checkbox>
+                        <p class="re-chec__p">Leoms iskb jdbvbj jsvhys sjbjd</p>
+                      </v-flex>
+                      <v-flex sm4>
+                        <div class="justify-center">
+                          <v-checkbox
+                            label="Custom detail field"
+                            v-model="custom"
+                            class="re-gray-color"
+                            color = "grey darken-1"
+                          ></v-checkbox>
+                          <p class="re-chec__p">Leoms iskb jdbvbj jsvhys sjbjd</p>
+                        </div>
+                      </v-flex>
+                      <v-flex sm4>
+                        <div class="re-c-style">
+                          <v-checkbox
+                            label="Is active"
+                            v-model="active"
+                            class="re-gray-color"
+                            color = "grey darken-1"
+                          ></v-checkbox>
+                          <p class="re-chec__p">Leoms iskb jdbvbj jsvhys sjbjd</p>
+                        </div>
+                      </v-flex>
+                    </v-layout>
+                    <v-layout>
+                      <v-select :items="items1" label="Validator"> </v-select>
+                    </v-layout>
+                    <v-layout wrap>
+                      <v-flex sm4>
+                        <v-checkbox
+                          label="Is Unit Type"
+                          v-model="isUnit2"
+                          class="re-gray-color justify-start"
+                          color = "grey darken-1"
+                        ></v-checkbox>
+                        <p class="re-chec__p">Leoms iskb jdbvbj jsvhys sjbjd</p>
+                      </v-flex>
+                      <v-flex sm4>
+                        <div class="justify-center">
+                          <v-checkbox
+                            label="Is Property"
+                            v-model="isProperty2"
+                            class="re-gray-color"
+                            color = "grey darken-1"
+                          ></v-checkbox>
+                          <p class="re-chec__p">Leoms iskb jdbvbj jsvhys sjbjd</p>
+                        </div>
+                      </v-flex>
+                      <v-flex sm4>
+                        <div class="re-c-style">
+                          <v-checkbox
+                            label="Is Tenant"
+                            v-model="isTenant2"
+                            class="re-gray-color"
+                            color = "grey darken-1"
+                          ></v-checkbox>
+                          <p class="re-chec__p">Leoms iskb jdbvbj jsvhys sjbjd</p>
+                        </div>
+                      </v-flex>
+                    </v-layout>
+                    <v-layout>
+                      <v-select :items="items1" label="Field"> </v-select>
+                    </v-layout>
+                    <v-layout>
+                      <v-select :items="items1" label="Order"> </v-select>
+                    </v-layout>
+                    <v-layout>
+                      <v-text-field label = "Label(EN)"></v-text-field>
+                    </v-layout>
+                    <v-layout>
+                      <v-text-field label = "Label(AR)"></v-text-field>
+                    </v-layout>
+                    <v-layout>
+                      <v-text-field label = "Name"></v-text-field>
+                    </v-layout>
+                    <v-layout>
+                      <v-btn class="re-del-btn"> Delete Field </v-btn>
+                    </v-layout>
+                  </v-card-text>
+                </v-card>
+                </v-tab-item>
+
+            </v-tabs>
+                      <!-- </v-card-text> -->
+                    <!-- </v-card> -->
+                  </v-expansion-panel-content>
             </v-expansion-panel>
           </v-flex>
-        </v-layout> -->
-        <!-- <v-layout row wrap justify-center>
-          <v-flex xs12 lg9>
-            <v-card class="re-margin-t40">
-              <v-card-title class="re-custom-controls">
-                <h3>Terms & Conditions</h3>
-              </v-card-title>
-              <v-card-text>
-                <v-checkbox
-                  label="Terms & conditions [En]"
-                  v-model="checkbox1"
-                  class="re-gray-color"
-                  color = "grey darken-1"
-                ></v-checkbox>
-                <p class="re-margin-t40 re-gray-color re-padding-start7 text-start">
-                  Terms & conditions [En]
-                </p>
-                <editor
-       api-key="no-api-key"
-       :init="{
-         height: 330,
-         menubar: false,
-         resize: false,
-         plugins: [
-           'advlist autolink lists link image charmap print preview anchor charmap emoticons ',
-           'searchreplace visualblocks code fullscreen directionality',
-           'insertdatetime media table paste code help wordcount'
-         ],
-         toolbar:[
-         'cut copy paste newdocument remove | undo redo|link image table  charmap emoticons|fullscreen media',
-         'bold italic strikethrough  |removeformat|indent outdent| blockquote|   alignleft aligncenter alignright alignjustify |ltr rtl', 
-           'styleselect | formatselect| fontselect|fontsizeselect|forecolor backcolor|  ',
-          
-           ]
-       }"
-     />
-      <p class="re-margin-t40 re-gray-color re-padding-start7 text-start">
-                  Terms & conditions [Ar]
-                </p>
-                            <editor
-       api-key="no-api-key"
-       :init="{
-         height: 330,
-         menubar: false,
-         resize: false,
-         plugins: [
-           'advlist autolink lists link image charmap print preview anchor charmap emoticons ',
-           'searchreplace visualblocks code fullscreen directionality',
-           'insertdatetime media table paste code help wordcount'
-         ],
-         toolbar:[
-         'cut copy paste newdocument remove | undo redo|link image table  charmap emoticons|fullscreen media',
-         'bold italic strikethrough  |removeformat|indent outdent| blockquote|   alignleft aligncenter alignright alignjustify |ltr rtl', 
-           'styleselect | formatselect| fontselect|fontsizeselect|forecolor backcolor|  ',
-          
-           ]
-       }"
-     />
-              </v-card-text>
-            </v-card>
-          </v-flex>
-        </v-layout> -->
+         </v-layout>
+
         <!-- <v-layout row wrap justify-center>
           <v-flex xs12 lg9>
             <v-card class="re-margin-t40">
@@ -992,8 +1318,11 @@ export default {
           isTenant2: false,
           hideEmail: true,
           individualProxy: true,
+          panel: [1],
           /*****DRAG DROP******/
           dragover: false,
+          showTabs:false,
+          btnText:"HIDE",
           headers: [{ text: "", align: "left", sortable: false }],
           items: [
             {
@@ -1064,9 +1393,31 @@ export default {
               this.imageUrl = "";
             }
           },
+          toggle(){
+            if(this.showTabs){
+              this.btnText = "HIDE"
+            }else{
+              this.btnText = "SHOW"
+            }
+            this.showTabs = !this.showTabs;
+          }
         },
   props: {
     msg: String
   }
 }
 </script>
+<style scoped >
+.re-custom-position{
+  position: relative;
+}
+.hide-tabs-btns{
+  position: absolute;
+  top:0px;
+  right: 0px;
+}
+
+.v-expansion-panel__body .v-card{
+  background-color:#fff!important;
+}
+</style>

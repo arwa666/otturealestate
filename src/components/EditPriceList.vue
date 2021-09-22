@@ -201,7 +201,7 @@
         </v-layout>
         <template>
           <div class="text-xs-center">
-            <v-dialog v-model="dialog" width="500">
+            <v-dialog v-model="dialog" width="420">
               <v-card>
                 <v-card-title
                   class="headline d-flex justify-space-between form-title"
@@ -536,4 +536,8 @@ export default {
 }
 </script>
 
-
+<style >
+ .v-dialog {
+   max-width: 420px!important;
+ }
+</style>

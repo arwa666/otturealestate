@@ -766,14 +766,7 @@ background: red !important;
 .width100{
 	width:100%
 }
-/* .v-tabs__item{
-    background: rgb(255, 255, 255)!important;
-    border-radius: 10px!important;
-    -webkit-border-radius: 10px!important;
-    -moz-border-radius: 10px!important;
-    -ms-border-radius: 10px!important;
-    -o-border-radius: 10px!important;
-} */
+
 /*****************************End realestate new Pages********************************/
 @media(min-width:1298px){
 	/* .re-filter .v-menu__content{
@@ -875,4 +868,39 @@ background: red !important;
 .re-add{
 	position: relative;
     top: -2px;
+}
+.theight{
+	opacity: 0;
+}
+.v-tabs{ transition: all .3s ease-in-out; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -ms-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out;
+}
+.v-expansion-panel__header__icon{
+display: none;
+}
+.v-expansion-panel__header:after{
+content: "SHOW";
+display: flex;
+position: absolute;
+right:0px;
+top:50px;
+width:88px;
+height:36px;
+justify-content: center;
+align-items: center;
+background-color:#f57829 ;
+color:#fff;
+z-index: 1000;
+box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+.v-expansion-panel__container--active .v-expansion-panel__header:after{
+	content: "HIDE";
+}
+ .theme--light.v-expansion-panel .v-expansion-panel__container{
+	background-color: transparent;
+}
+.v-expansion-panel__body .theme--light.v-sheet{
+	background-color: transparent!important;
+}
+.content__panel.v-expansion-panel{
+	box-shadow: none;
 }

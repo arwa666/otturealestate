@@ -184,7 +184,7 @@
           <div class="text-xs-center">
             <v-dialog
               v-model="dialog"
-              width="500"
+              max-width="420"
             >
         
               <v-card>
@@ -410,3 +410,8 @@ export default {
 </script>
 
 
+<style >
+ .v-dialog {
+   max-width: 420px!important;
+ }
+</style>
