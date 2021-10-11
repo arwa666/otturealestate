@@ -317,6 +317,8 @@
 </template>
 
 <script>
+import '@/assets/css/common.css';
+import '@/assets/css/style.css';
 export default {
   name: 'EditPriceList',
   computed: {

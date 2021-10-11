@@ -100,7 +100,8 @@
 </template>
 
 <script>
-
+import '@/assets/css/common.css';
+import '@/assets/css/style.css';
 import TerminateContract from "./TerminateContract.vue"
 export default {
   name: 'Page',
