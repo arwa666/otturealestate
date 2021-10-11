@@ -169,7 +169,7 @@
                     Terms & conditions [En]
                   </p>
                   <editor
-                      api-key="no-api-key"
+                      api-key="ua4qkh0o0hzb7uqmvw0zi5fpyjheepj47s9y2jtxzv2kf8x3"
                       :init="{
                         height: 330,
                         menubar: false,
@@ -191,7 +191,7 @@
                         Terms & conditions [Ar]
                     </p>
                   <editor
-                    api-key="no-api-key"
+                    api-key="ua4qkh0o0hzb7uqmvw0zi5fpyjheepj47s9y2jtxzv2kf8x3"
                     :init="{
                       height: 330,
                       menubar: false,
