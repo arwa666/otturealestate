@@ -37,10 +37,7 @@
                             <v-select 
                             label="Unit Type"
                           ></v-select>
-                            <!-- <v-text-field
-                            label="Unit Type"
-                            required
-                        ></v-text-field> -->
+
 
                         <v-text-field
                             label="Current Unit Amount"
@@ -107,8 +104,7 @@
 </template>
 
 <script>
-import '@/assets/css/common.css';
-import '@/assets/css/style.css';
+
 export default {
   name: 'EditPrice',
         data: () => ({
