@@ -150,20 +150,22 @@
                         <td >{{ props.item.contractEndDate }}</td>
                         <td >{{ props.item.pending }}</td>
                         <td >{{ props.item.amount }}</td>
-                        <td class="text-xs-center hoverable-list hoverable">
+                        <td class="text-xs-center hoverable-list">
                             <v-menu offset-y >
                                 <template v-slot:activator="{ on }">
                                 <v-icon v-on="on">more_horiz</v-icon>
                                 </template>
                                 <v-list>
                                 <v-list-tile
-                                    class=" hoverable-list"
+                                    class=" hoverable-list hoverable"
                                     v-for="(edititem, index) in edititems"
                                     :key="index"
                                 
                                 >
                                     <v-list-tile-title
-                                    >{{ edititem.title }}</v-list-tile-title
+                                    >
+                                    {{ edititem.title }}
+                                    </v-list-tile-title
                                     >
                                 </v-list-tile>
                                 </v-list>
@@ -300,5 +302,18 @@ export default {
 }
 .margin-top40{
     margin-top:40px;
+}
+.hoverable a{
+  color: rgba(0,0,0,.87);
+  text-decoration:none;
+ 
+}
+.hoverable:hover{
+  background: #f57829;
+   transition:background-color .3s ease-in-out;
+  color:#fff;
+}
+.hoverable {
+  cursor: pointer;
 }
 </style>
