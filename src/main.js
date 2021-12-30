@@ -21,7 +21,9 @@ import router from './router'
 // import PaymentRequest from './components/PaymentRequest';
 
 Vue.config.productionTip = false
-Vue.use(Vuetify);
+Vue.use(Vuetify,{
+  rtl:true
+});
 new Vue({
   router,
   render: h => h(App)

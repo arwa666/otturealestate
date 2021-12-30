@@ -25,7 +25,8 @@ import PropertyDetails from "../components/PropertyDetails.vue";
 import RenewContract from "../components/RenewContract.vue";
 import TenantManagement from "../components/TenantManagement.vue";
 import Unit from "../components/Unit.vue";
-import UnitType from "../components/UnitType.vue"
+import UnitType from "../components/UnitType.vue";
+import Contracts from "../components/Contracts.vue";
 Vue.use(VueRouter)
 
 const routes = [
@@ -148,6 +149,11 @@ const routes = [
     path: '/unit_type',
     name: 'unit_type',
     component:UnitType
+  },
+  {
+    path: '/contracts',
+    name: 'contracts',
+    component:Contracts
   }
 ]
 

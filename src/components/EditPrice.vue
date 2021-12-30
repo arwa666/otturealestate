@@ -29,7 +29,7 @@
                         >
                              <v-text-field 
                                 label="Property Name"
-                                reverse
+                                
                               ></v-text-field>
 
                               <v-select 
@@ -46,7 +46,7 @@
                         <v-text-field
                             label="Current Unit Amount"
                             required
-                             reverse
+                             
                         ></v-text-field>
 
                         <v-layout wrap>
@@ -54,7 +54,7 @@
                                 <v-text-field
                                     label="Current Unit Discount"
                                     required
-                                     reverse
+                                    
                                 ></v-text-field>
                             </v-flex>
                             <v-flex xs6>
@@ -68,13 +68,13 @@
                         <v-text-field
                             label="Current Unit Net Amount"
                             required
-                             reverse
+                             
                         ></v-text-field>
 
                         <v-text-field
                             label="New Unit Amount"
                             required
-                             reverse
+                             
                         ></v-text-field>
 
                         <v-layout wrap>
@@ -82,7 +82,7 @@
                                 <v-text-field
                                     label="New Unit Discount"
                                     required
-                                     reverse
+                                     
                                 ></v-text-field>
                             </v-flex>
                             <v-flex xs6>
@@ -96,7 +96,7 @@
                         <v-text-field
                             label="New Unit Net Amount"
                             required
-                             reverse
+                             
                         ></v-text-field>
 
                          </v-form>

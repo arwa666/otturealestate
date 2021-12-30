@@ -29,7 +29,7 @@
                         >
                              <v-text-field 
                                 label="Property Name"
-                                reverse
+                                
                               ></v-text-field>
 
                               <v-select 
@@ -44,7 +44,7 @@
                           <v-text-field
                             label="Tenant Name"
                             required
-                            reverse
+                            
                           ></v-text-field>
 
                           <v-menu
@@ -65,7 +65,7 @@
                               label="Old Contract Start Date"
                               prepend-icon="event"
                               readonly
-                              reverse
+                              
                               v-on="on" 
                             class="re-datepicker"
                             ></v-text-field>
@@ -95,7 +95,7 @@
                               label="Old Contract End Date"
                               prepend-icon="event"
                               readonly
-                              reverse
+                              
                               v-on="on" 
                             class="re-datepicker"
                             ></v-text-field>
@@ -110,7 +110,7 @@
                         <v-text-field
                         label="Old Contract Amount"
                         required
-                        reverse
+                        
                       ></v-text-field>
                       <v-menu
                       ref="menu3"
@@ -130,7 +130,7 @@
                           label="New Contract Start Date"
                           prepend-icon="event"
                           readonly
-                          reverse
+                          
                           v-on="on" 
                         class="re-datepicker"
                         ></v-text-field>
@@ -159,7 +159,7 @@
                               label="New Contract End Date"
                               prepend-icon="event"
                               readonly
-                              reverse
+                              
                               v-on="on" 
                               class="re-datepicker"
                             ></v-text-field>
@@ -176,7 +176,7 @@
                             <v-text-field
                             label="New Contract Amount"
                             required
-                            reverse
+                            
                           ></v-text-field>
                           </v-flex>
                         <v-flex xs4 md2 class="text-xs-right">

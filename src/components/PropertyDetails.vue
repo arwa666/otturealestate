@@ -29,17 +29,17 @@
                         <v-text-field
                           label="Unit Property Name (EN)"
                           required
-                          reverse
+                    
                         ></v-text-field>
                         <v-text-field
                           label="Unit Property Name (AR)"
                           required
-                          reverse
+                          
                         ></v-text-field>
                         <v-text-field
                           label="Address"
                           required
-                          reverse
+                          
                         ></v-text-field>
                         <v-select label="Gateway"> ></v-select>
                         <v-checkbox label="Allow cash payment"></v-checkbox>
@@ -188,7 +188,7 @@
                                           class="re-input re-centered-label"
                                           label="1"
                                           outline
-                                          reverse
+                                          
                                         ></v-text-field>
                                       </v-flex>
                                       <v-flex xs4 sm1 class="r-price">
@@ -196,7 +196,7 @@
                                           class="re-input re-centered-label"
                                           label="Price"
                                           outline
-                                          reverse
+                                          
                                         ></v-text-field>
                                       </v-flex>
                                       <v-flex xs4 sm1 re-text-center>

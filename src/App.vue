@@ -100,8 +100,11 @@
 </template>
 <script>
 
-
+import '@/assets/css/common.css';
+import '@/assets/css/style.css';
+import '@/assets/css/rtl.css'
 export default {
+  
     components: {
      
     },
@@ -118,4 +121,8 @@ export default {
 }
 </script>
 
-
+<style>
+.re-tool .v-toolbar__content{
+  justify-content: space-between;
+}
+</style>
