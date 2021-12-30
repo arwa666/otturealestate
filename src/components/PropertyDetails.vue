@@ -82,7 +82,7 @@
                                                       
                           <template>
                           <div>
-                            <v-dialog v-model="dialog" width="98%" class="re-dialog">
+                            <v-dialog v-model="dialog" width="98%" class="re-dialog" >
                               <template v-slot:activator="{ on }">
                                 <v-btn
                                  
@@ -272,8 +272,7 @@
 </template>
 
 <script>
-import '@/assets/css/common.css';
-import '@/assets/css/style.css';
+
 export default {
   name: 'PropertyDetails',
         computed: {

@@ -53,7 +53,7 @@
                   <v-spacer></v-spacer>
 
                 
-                  <!-- <v-btn color="warning" dark class="re-orangtbtn">FILTER <v-icon right>filter_list</v-icon></v-btn> -->
+                  
                   <v-menu
                     v-model="menu"
                     :close-on-content-click="false"
@@ -261,8 +261,7 @@
 </template>
 
 <script>
-import '@/assets/css/common.css';
-import '@/assets/css/style.css';
+
 export default {
   name: 'AdvancePaymentList',
   computed: {
@@ -412,7 +411,7 @@ export default {
 </script>
 
 
-<style >
+<style scoped>
  .v-dialog {
    max-width: 420px!important;
  }

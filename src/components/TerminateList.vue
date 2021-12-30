@@ -277,8 +277,7 @@
 </template>
 
 <script>
-import '@/assets/css/common.css';
-import '@/assets/css/style.css';
+
 export default {
   name: 'TerminateList',
             computed: {
@@ -452,7 +451,7 @@ export default {
 }
 </script>
 
-<style >
+<style scoped>
  .v-dialog {
    max-width: 420px!important;
  }
