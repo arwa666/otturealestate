@@ -83,13 +83,7 @@
         <v-toolbar-side-icon
           @click.stop="drawer = !drawer"
         ></v-toolbar-side-icon>
-        <v-img
-          lazy-src="images/ottu-logo.png"
-          max-height="70"
-          max-width="120"
-          src="images/ottu-logo.png"
-          class="re-ma"
-        ></v-img>
+        <img src="@/assets/images/ottu-logo.png"  style="max-width:120px; max-height:70px" alt="">
       </v-toolbar>
       <v-content>
         
@@ -118,3 +112,8 @@ export default {
 }
 </script>
 
+<style >
+.re-tool .v-toolbar__content{
+  justify-content: space-between;
+}
+</style>
