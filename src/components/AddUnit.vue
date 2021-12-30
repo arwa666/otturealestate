@@ -40,23 +40,20 @@
                         <v-text-field
                           label="Unit Type Name (EN)"
                           required
-                         
                         ></v-text-field>
   
                         <v-text-field
                           label="Unit Type Name (AR)"
                           required
-                         
                         ></v-text-field>
   
                         <v-text-field
                           label="Unit Type Description"
                           required
-                         
                         ></v-text-field>
                         <v-layout wrap class="re-radio">
                           <v-flex xs4>
-                            <v-checkbox label="is commercial"></v-checkbox>
+                            <v-checkbox label="is commercial"  color="grey darken-1"></v-checkbox>
                           </v-flex>
                         </v-layout>
                       </v-form>
@@ -75,6 +72,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'AddUnit',
         data: () => ({

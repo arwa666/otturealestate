@@ -95,11 +95,11 @@
                         </v-list-tile>
 
                         <v-list-tile>
-                          <v-text-field label="Year" ></v-text-field>
+                          <v-text-field label="Year"></v-text-field>
                         </v-list-tile>
 
                         <v-list-tile>
-                          <v-text-field label="Property name" ></v-text-field>
+                          <v-text-field label="Property name"></v-text-field>
                         </v-list-tile>
                       </v-list>
 
@@ -110,7 +110,7 @@
                           >SEARCH</v-btn
                         >
                         <v-btn
-                        
+                         
                           flat
                           @click="menu = false"
                           class="re-gray-btn re-box-shadow"
@@ -129,7 +129,7 @@
                     :rows-per-page-items="[15, 30, 50, 100]"
                     :pagination.sync="pagination"
                     hide-actions
-                    class="width100"
+                    
                   >
                     <template v-slot:items="props">
                       <tr @click="dialog=true">
@@ -141,7 +141,7 @@
                         "
                       
                       >
-                        <div>{{ props.item.tenant }}</div>
+                        <div>{{ props.item.name }}</div>
                       </td>
                       <td class="text-xs-center re-width-145 div ">
                         <div>{{ props.item.created }}</div>
@@ -194,7 +194,7 @@
           <div class="text-xs-center">
             <v-dialog
               v-model="dialog"
-              width="500"
+              width="420"
             >
         
               <v-card>
@@ -204,7 +204,7 @@
                 
                 >
                 <span class="text-start">
-                  CONTRACT ID
+                    NEW CONTRACT
                 </span>
                 <v-icon class="d-flex justify-end"  @click="dialog = false">
                   close
@@ -214,24 +214,28 @@
                 <v-card-text>
                         <v-list dense>
                           <v-list-tile>
-                            <v-list-tile-content>Tenant Name</v-list-tile-content>
-                            <v-list-tile-content class="align-end orange-c">{{ units[0].tenant }}</v-list-tile-content>
+                            <v-list-tile-content>ID</v-list-tile-content>
+                            <v-list-tile-content class="align-end orange-c">A1</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Created</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].created }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">21/09/2021 13:30:25</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Initiator</v-list-tile-content>
-                            <v-list-tile-content class="align-end orange-c">{{ units[0].initiator }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end orange-c">username</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Status</v-list-tile-content>
-                            <v-list-tile-content class="align-end" :class={ongoing:units[0].ongoing}>{{ units[0].status }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end" :class={ongoing:units[0].ongoing}>Ongoing</v-list-tile-content>
+                          </v-list-tile>
+                          <v-list-tile>
+                            <v-list-tile-content>Tenant Name</v-list-tile-content>
+                            <v-list-tile-content class="align-end orange-c">Someone</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Property Name</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].propertyName }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">Mazaya</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Unit Type</v-list-tile-content>
@@ -239,19 +243,19 @@
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Unit Number</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].unitNumber }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">12</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Contract start Date</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].startDate }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">09/08/2021</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Contract End Date</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].endDate }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">09/08/2021</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Amount</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].amount }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">4000.000 KWD</v-list-tile-content>
                           </v-list-tile> 
                         </v-list>
                 </v-card-text>
@@ -266,6 +270,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'NewContractList',
 computed: {
@@ -310,7 +315,7 @@ computed: {
           headers1: [
             {
               text: "ID",
-              align: "right",
+              align: "left",
               sortable: false,
             },
             {
@@ -438,3 +443,9 @@ computed: {
         },
 }
 </script>
+
+<style scoped>
+ .v-dialog {
+   max-width: 420px!important;
+ }
+</style>

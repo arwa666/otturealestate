@@ -150,6 +150,7 @@
                           >SEARCH</v-btn
                         >
                         <v-btn
+                          
                           flat
                           @click="menu = false"
                           class="re-gray-btn re-box-shadow"
@@ -281,6 +282,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'RentMangement',
          computed: {

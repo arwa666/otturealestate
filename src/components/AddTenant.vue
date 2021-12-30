@@ -41,14 +41,12 @@
 							<v-text-field
 							label=" Tenant Name (EN)"
 							required
-              
                             class="mb-2"
 							></v-text-field>
 
 							<v-text-field
 							label="Tenant Name (AR)"
 							required
-              
                             class="mb-2"
 							></v-text-field>
 
@@ -56,7 +54,6 @@
 							<v-text-field
 							label="Civil ID Number"
 							required
-               
                             class="mb-4"
 							></v-text-field>
 
@@ -76,7 +73,6 @@
 							<v-text-field
 							label="Passport Number"
 							required
-               
                             class="mb-4"
 							></v-text-field>
 
@@ -109,18 +105,17 @@
                                   label="Phone Number"
                                   required
                                   outline
-                                   
                                   class="mb-2 re-phone-num"
                                  ></v-text-field>
                                 </v-flex>
                        </v-layout>
-                         <v-text-field label="Email Address" required   class="mb-2"></v-text-field>
+                         <v-text-field label="Email Address" required class="mb-2"></v-text-field>
                          
                                
                                     <v-checkbox
                                     label="Married?"
-                                    color="grey darken-1"
                                     v-model="checked"
+                                     color="grey darken-1"
                                    ></v-checkbox>
                                
                                
@@ -128,7 +123,6 @@
                                 <v-text-field
                                 label="Civil ID Number"
                                 required
-                                 
                                 class="mb-2 ml-3"
                                 ></v-text-field>
                                 <span class="re-upload__span mb-3  ml-3" style="display: block;">Upload Civil ID (Front)</span>
@@ -140,7 +134,6 @@
                                 <v-text-field
                                 label="Passport Number"
                                 required
-                                 
                                 class="mb-3  ml-3"
                                 ></v-text-field>
                                 <v-layout class="align-center mb-3  ml-3">
@@ -170,7 +163,6 @@
                                     label="Phone Number"
                                     required
                                     outline
-                                    
                                     class="mb-2 re-phone-num"
                                    ></v-text-field>
                                   </v-flex>
@@ -178,7 +170,6 @@
                                 <v-text-field
                                 label="Email Address"
                                 required
-                                 
                                 class="mb-2  ml-3"
                                 ></v-text-field>
                             </div></v-form> </v-card-text>
@@ -196,6 +187,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'AddTenant',
         data: () => ({

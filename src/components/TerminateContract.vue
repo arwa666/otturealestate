@@ -26,7 +26,7 @@
                 </v-card-title>
                 <v-card-text>
                   <v-form>
-                    <v-text-field label="Property Name" ></v-text-field>
+                    <v-text-field label="Property Name"></v-text-field>
 
                     <v-select label="Unit Number"></v-select>
 
@@ -36,7 +36,7 @@
                             required
                           ></v-text-field> -->
 
-                    <v-text-field label="Tenant Name" required ></v-text-field>
+                    <v-text-field label="Tenant Name" required></v-text-field>
 
                     <v-menu
                       ref="menu"
@@ -56,7 +56,6 @@
                           label="Old Contract Start Date"
                           prepend-icon="event"
                           readonly
-                          
                           v-on="on"
                           class="re-datepicker"
                         ></v-text-field>
@@ -93,7 +92,6 @@
                           label="Old Contract End Date"
                           prepend-icon="event"
                           readonly
-                          
                           v-on="on"
                           class="re-datepicker"
                         ></v-text-field>
@@ -130,7 +128,6 @@
                           label="Terminate Date"
                           prepend-icon="event"
                           readonly
-                          
                           v-on="on"
                           class="re-datepicker"
                         ></v-text-field>

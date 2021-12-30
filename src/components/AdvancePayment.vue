@@ -26,39 +26,39 @@
                 </v-card-title>
                 <v-card-text>
                   <v-form>
-                    <v-text-field label="Property Name" ></v-text-field>
+                    <v-text-field label="Property Name"></v-text-field>
 
                     <v-select label="Unit Name"></v-select>
 
-                    <v-text-field label="Tenant Name" ></v-text-field>
+                    <v-text-field label="Tenant Name"></v-text-field>
 
                     <v-layout wrap class="re-radio">
                       <v-flex xs6 sm4>
-                        <v-checkbox label="August 2021"></v-checkbox>
+                        <v-checkbox label="August 2021"  color="grey darken-1"></v-checkbox>
                       </v-flex>
                       <v-flex xs6 sm4>
-                        <v-checkbox label="December 2021"></v-checkbox>
+                        <v-checkbox label="December 2021"  color="grey darken-1"></v-checkbox>
                       </v-flex>
                       <v-flex xs6 sm4>
-                        <v-checkbox label="April 2022"></v-checkbox>
+                        <v-checkbox label="April 2022"  color="grey darken-1"></v-checkbox>
                       </v-flex>
                       <v-flex xs6 sm4>
-                        <v-checkbox label="September 2022"></v-checkbox>
+                        <v-checkbox label="September 2022"  color="grey darken-1"></v-checkbox>
                       </v-flex>
                       <v-flex xs6 sm4>
-                        <v-checkbox label="January 2022"></v-checkbox>
+                        <v-checkbox label="January 2022" color="grey darken-1"></v-checkbox>
                       </v-flex>
                       <v-flex xs6 sm4>
-                        <v-checkbox label="May 2022"></v-checkbox>
+                        <v-checkbox label="May 2022"  color="grey darken-1"></v-checkbox>
                       </v-flex>
                       <v-flex xs6 sm4>
-                        <v-checkbox label="October 2022"></v-checkbox>
+                        <v-checkbox label="October 2022"  color="grey darken-1"></v-checkbox>
                       </v-flex>
                       <v-flex xs6 sm4>
-                        <v-checkbox label="February 2022"></v-checkbox>
+                        <v-checkbox label="February 2022"  color="grey darken-1"></v-checkbox>
                       </v-flex>
                       <v-flex xs6 sm4>
-                        <v-checkbox label="June 2022"></v-checkbox>
+                        <v-checkbox label="June 2022"  color="grey darken-1"></v-checkbox>
                       </v-flex>
                     </v-layout>
                   </v-form>
@@ -78,6 +78,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'AdvancePayment',
         data: () => ({

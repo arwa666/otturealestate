@@ -49,7 +49,7 @@
       
                       <v-spacer></v-spacer>
       
-                      <!-- <v-btn color="warning" dark class="re-orangtbtn">FILTER <v-icon right>filter_list</v-icon></v-btn> -->
+                    
                       <v-menu
                         v-model="menu"
                         :close-on-content-click="false"
@@ -106,7 +106,7 @@
                               >SEARCH</v-btn
                             >
                             <v-btn
-                              color="primary"
+                             
                               flat
                               @click="menu = false"
                               class="re-gray-btn re-box-shadow"
@@ -241,6 +241,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'Properties',
         computed: {

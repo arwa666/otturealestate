@@ -24,7 +24,7 @@ import Properties from "../components/Properties.vue";
 import PropertyDetails from "../components/PropertyDetails.vue";
 import RenewContract from "../components/RenewContract.vue";
 import TenantManagement from "../components/TenantManagement.vue";
-import Unit from "../components/Unit.vue";
+// import Unit from "../components/Unit.vue";
 import UnitType from "../components/UnitType.vue";
 import Contracts from "../components/Contracts.vue";
 Vue.use(VueRouter)
@@ -35,11 +35,7 @@ const routes = [
     name: 'configuration',
     component: Configuration
   },
-  {
-    path: '/rent_management',
-    name: 'rent_management',
-    component: RentManagement
-  },
+
   {
     path: '/terminate_contract',
     name: 'terminate_contract',
@@ -141,9 +137,9 @@ const routes = [
     component:TenantManagement
   },
   {
-    path: '/unit',
-    name: 'unit',
-    component:Unit
+    path: '/contracts',
+    name: 'contracts',
+    component:Contracts
   },
   {
     path: '/unit_type',

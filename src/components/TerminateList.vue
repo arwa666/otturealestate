@@ -129,7 +129,7 @@
                     :rows-per-page-items="[15, 30, 50, 100]"
                     :pagination.sync="pagination"
                     hide-actions
-                    class="width100"
+                    
                   >
                     <template v-slot:items="props">
                       <tr @click="dialog=true">
@@ -194,7 +194,7 @@
           <div class="text-xs-center">
             <v-dialog
               v-model="dialog"
-              width="500"
+              width="420"
             >
         
               <v-card>
@@ -204,7 +204,7 @@
                 
                 >
                 <span class="text-start">
-                  CONTRACT ID
+                 TERMINATE CONTRACT
                 </span>
                 <v-icon class="d-flex justify-end"  @click="dialog = false">
                   close
@@ -218,44 +218,48 @@
                         
                         <v-list dense>
                           <v-list-tile>
-                            <v-list-tile-content>Tenant Name</v-list-tile-content>
-                            <v-list-tile-content class="align-end orange-c">{{ units[0].tenant }}</v-list-tile-content>
+                            <v-list-tile-content>ID</v-list-tile-content>
+                            <v-list-tile-content class="align-end orange-c">A1</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Created</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].created }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">31/10/2021 13:30:25</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Initiator</v-list-tile-content>
-                            <v-list-tile-content class="align-end orange-c">{{ units[0].initiator }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end orange-c">username</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Status</v-list-tile-content>
-                            <v-list-tile-content class="align-end" :class={ongoing:units[0].ongoing}>{{ units[0].status }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end" :class={ongoing:units[0].ongoing}>Ongoing</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Property Name</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].propertyName }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">Mazaya</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Unit Number</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].unitNumber }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">12</v-list-tile-content>
+                          </v-list-tile>
+                          <v-list-tile>
+                            <v-list-tile-content>Tenant Name</v-list-tile-content>
+                            <v-list-tile-content class="align-end orange-c">Someone</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Unit Type</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].unitType }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">2 BDR</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content> Old Contract Start Date</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].oldStartDate }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">09/08/2021</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content> Old Contract End Date</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].oldEndDate }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">09/08/2021</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Termination Date</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].oldEndDate }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">09/08/2021</v-list-tile-content>
                           </v-list-tile>
                         </v-list>
 
@@ -273,6 +277,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'TerminateList',
             computed: {
@@ -446,4 +451,8 @@ export default {
 }
 </script>
 
-
+<style scoped>
+ .v-dialog {
+   max-width: 420px!important;
+ }
+</style>

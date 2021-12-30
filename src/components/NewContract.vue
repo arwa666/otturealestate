@@ -29,12 +29,10 @@
                         >
                              <v-text-field 
                                 label="Tenant Name"
-                                
                               ></v-text-field>
 
                               <v-text-field 
                               label="Property Name"
-                              
                             ></v-text-field>
 
                             <v-select
@@ -66,7 +64,6 @@
                               label="Contract Start Date"
                               prepend-icon="event"
                               readonly
-                              
                               v-on="on" 
                             class="re-datepicker re-pos-absolute "
                             
@@ -97,7 +94,6 @@
                               label="Payment Start Date"
                               prepend-icon="event"
                               readonly
-                              
                               v-on="on" 
                             class="re-datepicker"
                             ></v-text-field>
@@ -127,7 +123,6 @@
                           label="Contract End Date"
                           prepend-icon="event"
                           readonly
-                          
                           v-on="on" 
                         class="re-datepicker"
                         ></v-text-field>
@@ -156,7 +151,6 @@
                               label="Leave Notice Date"
                               prepend-icon="event"
                               readonly
-                              
                               v-on="on" 
                               class="re-datepicker"
                             ></v-text-field>
@@ -185,7 +179,6 @@
                             label="Actual Leave Date"
                             prepend-icon="event"
                             readonly
-                            
                             v-on="on" 
                             class="re-datepicker"
                           ></v-text-field>
@@ -199,7 +192,6 @@
                         <v-text-field
                         label="Amount"
                         required
-                        
                       ></v-text-field>
                          
                          </v-form>
@@ -217,6 +209,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'NewContract',
           computed: {

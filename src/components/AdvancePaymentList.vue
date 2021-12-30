@@ -53,7 +53,7 @@
                   <v-spacer></v-spacer>
 
                 
-                  <!-- <v-btn color="warning" dark class="re-orangtbtn">FILTER <v-icon right>filter_list</v-icon></v-btn> -->
+                  
                   <v-menu
                     v-model="menu"
                     :close-on-content-click="false"
@@ -94,7 +94,7 @@
                         </v-list-tile>
 
                         <v-list-tile>
-                          <v-text-field label="Year" ></v-text-field>
+                          <v-text-field label="Year"></v-text-field>
                         </v-list-tile>
 
                         <v-list-tile>
@@ -109,7 +109,7 @@
                           >SEARCH</v-btn
                         >
                         <v-btn
-                         
+                          
                           flat
                           @click="menu = false"
                           class="re-gray-btn re-box-shadow"
@@ -184,7 +184,7 @@
           <div class="text-xs-center">
             <v-dialog
               v-model="dialog"
-              width="500"
+              max-width="420"
             >
         
               <v-card>
@@ -194,9 +194,9 @@
                 
                 >
                 <span class="text-start">
-                  CONTRACT ID
+                  ADVANCE PAYMENT
                 </span>
-                <v-icon class="d-flex justify-end flip-dir"  @click="dialog = false">
+                <v-icon class="d-flex justify-end"  @click="dialog = false">
                   close
                 </v-icon>
                 </v-card-title>
@@ -204,44 +204,48 @@
                 <v-card-text>
                         <v-list dense>
                           <v-list-tile>
-                            <v-list-tile-content>Tenant Name</v-list-tile-content>
-                            <v-list-tile-content class="align-end orange-c">{{ units[0].tenant }}</v-list-tile-content>
+                            <v-list-tile-content>ID</v-list-tile-content>
+                            <v-list-tile-content class="align-end orange-c">A1</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Created</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].created }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">31/10/2021 13:30:25</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Initiator</v-list-tile-content>
-                            <v-list-tile-content class="align-end orange-c">{{ units[0].initiator }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end orange-c">username</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Status</v-list-tile-content>
-                            <v-list-tile-content class="align-end" :class={ongoing:units[0].ongoing}>{{ units[0].status }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end" :class={ongoing:units[0].ongoing}>Ongoing</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Property Name</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].propertyName }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">Mazaya</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Unit Number</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].unitNumber }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">12</v-list-tile-content>
+                          </v-list-tile>
+                          <v-list-tile>
+                            <v-list-tile-content>Tenant Name</v-list-tile-content>
+                            <v-list-tile-content class="align-end orange-c">Someone</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
                             <v-list-tile-content>Total Amount</v-list-tile-content>
-                            <v-list-tile-content class="align-end">{{ units[0].totalAmount }}</v-list-tile-content>
+                            <v-list-tile-content class="align-end">4000.000 KD</v-list-tile-content>
                           </v-list-tile>
                         </v-list>
                         <div style="padding-inline-start:18px" class=" text-start">Paid Months/Year</div>
                         <v-layout wrap class="check">
                             <v-flex xs6 sm6>
-                              <v-checkbox label="June, 2021, 200 KD" input-value="true" disabled></v-checkbox>
+                              <v-checkbox label="June, 2021, 200.000 KD" input-value="true" disabled  color="grey darken-1"></v-checkbox>
                             </v-flex>
                             <v-flex xs6 sm6>
-                              <v-checkbox label="Junly, 2021, 200 KD" input-value="true" disabled></v-checkbox>
+                              <v-checkbox label="Junly, 2021, 200.00 KD" input-value="true" disabled  color="grey darken-1"></v-checkbox>
                             </v-flex>
                             <v-flex xs6 sm6>
-                              <v-checkbox label="August 2021" input-value="true" disabled></v-checkbox>
+                              <v-checkbox label="August 2021, 200.00 KD" input-value="true" disabled  color="grey darken-1"></v-checkbox>
                             </v-flex>
 
                           </v-layout>
@@ -257,6 +261,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'AdvancePaymentList',
   computed: {
@@ -406,3 +411,8 @@ export default {
 </script>
 
 
+<style scoped>
+ .v-dialog {
+   max-width: 420px!important;
+ }
+</style>

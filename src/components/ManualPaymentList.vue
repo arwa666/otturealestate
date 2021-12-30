@@ -53,7 +53,7 @@
 
                   <v-spacer></v-spacer>
 
-                  <!-- <v-btn color="warning" dark class="re-orangtbtn">FILTER <v-icon right>filter_list</v-icon></v-btn> -->
+                 
                   <v-menu
                     v-model="menu"
                     :close-on-content-click="false"
@@ -94,11 +94,11 @@
                         </v-list-tile>
 
                         <v-list-tile>
-                          <v-text-field label="Year" ></v-text-field>
+                          <v-text-field label="Year"></v-text-field>
                         </v-list-tile>
 
                         <v-list-tile>
-                          <v-text-field label="Property name" ></v-text-field>
+                          <v-text-field label="Property name"></v-text-field>
                         </v-list-tile>
                       </v-list>
 
@@ -109,7 +109,7 @@
                           >SEARCH</v-btn
                         >
                         <v-btn
-                          
+                         
                           flat
                           @click="menu = false"
                           class="re-gray-btn re-box-shadow"
@@ -127,7 +127,6 @@
                     :rows-per-page-items="[15, 30, 50, 100]"
                     :pagination.sync="pagination"
                     hide-actions
-                    class="width100"
                   >
                     <template v-slot:items="props">
                       <tr @click="dialog=true">
@@ -190,13 +189,13 @@
         </v-layout>
         <template>
           <div class="text-xs-center">
-            <v-dialog v-model="dialog" width="500">
+            <v-dialog v-model="dialog" width="420">
               <v-card>
                 <v-card-title
                   class="headline d-flex justify-space-between form-title"
                   primary-title
                 >
-                  <span class="text-start"> CONTRACT ID </span>
+                  <span class="text-start"> MANUAL PAYMENT</span>
                   <v-icon class="d-flex justify-end" @click="dialog = false">
                     close
                   </v-icon>
@@ -204,21 +203,21 @@
                 <v-card-text>
                   <v-list dense>
                     <v-list-tile>
-                      <v-list-tile-content>Tenant Name</v-list-tile-content>
+                      <v-list-tile-content>ID</v-list-tile-content>
                       <v-list-tile-content class="align-end orange-c"
-                        >{{ units[0].tenant }}</v-list-tile-content
+                        >A1</v-list-tile-content
                       >
                     </v-list-tile>
                     <v-list-tile>
                       <v-list-tile-content>Created</v-list-tile-content>
                       <v-list-tile-content class="align-end"
-                        >{{ units[0].created }}</v-list-tile-content
+                        >31/10/2021 13:30:25</v-list-tile-content
                       >
                     </v-list-tile>
                     <v-list-tile>
                       <v-list-tile-content>Initiator</v-list-tile-content>
                       <v-list-tile-content class="align-end orange-c"
-                        >{{ units[0].initiator }}</v-list-tile-content
+                        >username</v-list-tile-content
                       >
                     </v-list-tile>
                     <v-list-tile>
@@ -226,43 +225,49 @@
                       <v-list-tile-content
                         class="align-end"
                         :class="{ongoing:units[0].ongoing}"
-                        >{{ units[0].status }}</v-list-tile-content
+                        >Ongoing</v-list-tile-content
                       >
                     </v-list-tile>
                     <v-list-tile>
                       <v-list-tile-content>Property Name</v-list-tile-content>
                       <v-list-tile-content class="align-end"
-                        >{{ units[0].propertyName }}</v-list-tile-content
+                        >Mazaya</v-list-tile-content
                       >
                     </v-list-tile>
                     <v-list-tile>
                       <v-list-tile-content>Unit Number</v-list-tile-content>
                       <v-list-tile-content class="align-end"
-                        >{{ units[0].unitNumber }}</v-list-tile-content
+                        >12</v-list-tile-content
                       >
                     </v-list-tile>
                     <v-list-tile>
                       <v-list-tile-content>Unit Type</v-list-tile-content>
                       <v-list-tile-content class="align-end"
-                        >{{ units[0].unitType }}</v-list-tile-content
+                        >2BDR</v-list-tile-content
+                      >
+                    </v-list-tile>
+                    <v-list-tile>
+                      <v-list-tile-content>Tenant Name</v-list-tile-content>
+                      <v-list-tile-content class="align-end orange-c"
+                        >Someone</v-list-tile-content
                       >
                     </v-list-tile>
                     <v-list-tile>
                       <v-list-tile-content>Month</v-list-tile-content>
                       <v-list-tile-content class="align-end"
-                        >{{ units[0].month }}</v-list-tile-content
+                        >June</v-list-tile-content
                       >
                     </v-list-tile>
                     <v-list-tile>
                       <v-list-tile-content>Year</v-list-tile-content>
                       <v-list-tile-content class="align-end"
-                        >{{ units[0].year }}</v-list-tile-content
+                        >2021</v-list-tile-content
                       >
                     </v-list-tile>
                     <v-list-tile>
                       <v-list-tile-content>Amount</v-list-tile-content>
                       <v-list-tile-content class="align-end"
-                        >{{ units[0].amount }}</v-list-tile-content
+                        >4000.000 KD</v-list-tile-content
                       >
                     </v-list-tile>
                   </v-list>
@@ -275,6 +280,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'ManualPaymentList',
 computed: {
@@ -446,4 +452,8 @@ computed: {
 }
 </script>
 
-
+<style scoped >
+ .v-dialog {
+   max-width: 420px!important;
+ }
+</style>

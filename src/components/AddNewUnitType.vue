@@ -40,21 +40,19 @@
                             <v-text-field
                               label="Unit Type Name (EN)"
                               required
-                          
                               class="mb-2"
                             ></v-text-field>
           
                             <v-text-field
                               label="Unit Type Name (AR)"
                               required
-                              
                               class="mb-2"
                             ></v-text-field>
           
                             <v-text-field
                               label="Unit Type Description"
                               required
-                              
+                              color="grey darken-1"
                             ></v-text-field>
                             <v-checkbox
                             label = "Is Commercial"
@@ -77,6 +75,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'AddNewUnitType',
         data: () => ({

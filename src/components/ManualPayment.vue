@@ -29,7 +29,6 @@
                         >
                              <v-text-field 
                                 label="Property Name"
-                            
                               ></v-text-field>
 
                               <v-select 
@@ -44,7 +43,6 @@
                         <v-text-field
                             label="Tenant Name"
                             required
-                            
                         ></v-text-field>
 
                         <v-select 
@@ -53,12 +51,10 @@
 
                       <v-text-field 
                         label="Year"
-                        
                       ></v-text-field>
                       
                       <v-text-field 
                         label="Price"
-                      
                       ></v-text-field>
 
                          </v-form> 
@@ -75,6 +71,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'ManualPayment',
           data: () => ({
