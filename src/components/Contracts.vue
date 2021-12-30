@@ -95,21 +95,16 @@
                                 Days
                         </v-list-tile>
                         <v-list-tile>
-                            <v-select
-                            :items="items1"
-                            label="PROPERTIES"
-                            style="margin-bottom:15px"
-                            
-                        ></v-select>
+                          <v-text-field
+                          label="PROPERTIES">
+                          </v-text-field>
      
                         </v-list-tile>
 
                         <v-list-tile>
-                          <v-select
-                            :items="items2"
-                            label="TENANT"
-                            
-                        ></v-select>
+                          <v-text-field
+                          label="TENANT">
+                          </v-text-field>
                         </v-list-tile>
 
                       </v-list>
@@ -174,25 +169,6 @@
                                 </v-list>
                             </v-menu>
                         </td>
-                        <td class="text-xs-center hoverable">
-                             <v-menu offset-y>
-                                <template v-slot:activator="{ on }">
-                                <v-icon v-on="on">more_horiz</v-icon>
-                                </template>
-                                <v-list>
-                                <v-list-tile
-                                    class=" hoverable-list"
-                                    v-for="(edititem, index) in edititems1"
-                                    :key="index"
-                                
-                                >
-                                    <v-list-tile-title
-                                    >{{ edititem.title }}</v-list-tile-title
-                                    >
-                                </v-list-tile>
-                                </v-list>
-                            </v-menu>
-                        </td>
                       </template>
                     </v-data-table>
                     </div>
@@ -223,8 +199,6 @@ export default {
           expand:true,
           row:"",
           on:{},
-          items1: ["Farag","Mazaya"],
-          items2: ["Mohamed","Ahmed"],
           items: [
             {
               text: "Dashboard",
@@ -237,11 +211,10 @@ export default {
               href: "#",
             },
           ],
-          edititems:[{title:"terminate1"},{title: "terminate2"}],
-          edititems1:[{title:"renew1"},{title: "renew2"}],
+          edititems:[{title:"Terminate Contract"},{title: "Renew Contract"}],
           headers: [
             {
-              text: "CONTRACT1",
+              text: "CONTRACT",
               align: "left",
               sortable: false,
             },
@@ -255,8 +228,7 @@ export default {
             { text: "CONTRACT END DATE", align: "left", sortable: false },
             { text: "PENDING", align: "left", sortable: false },
             { text: "AMOUNT", align: "left", sortable: false },
-            { text: "TERMINATE", align: "left", sortable: false },
-            { text: "RENEW", align: "left", sortable: false },
+            { text: "ACTION", align: "left", sortable: false }
           ],
           units: [
             {
