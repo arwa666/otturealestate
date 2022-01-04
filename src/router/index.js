@@ -27,6 +27,7 @@ import TenantManagement from "../components/TenantManagement.vue";
 // import Unit from "../components/Unit.vue";
 import UnitType from "../components/UnitType.vue";
 import Contracts from "../components/Contracts.vue";
+import PaymentList from "../components/PaymentList.vue"
 Vue.use(VueRouter)
 
 const routes = [
@@ -145,6 +146,11 @@ const routes = [
     path: '/unit_type',
     name: 'unit_type',
     component:UnitType
+  },
+  {
+    path: '/payment_list',
+    name: 'payment_list',
+    component:PaymentList
   }
 ]
 
