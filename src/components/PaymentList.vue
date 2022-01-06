@@ -330,56 +330,56 @@
                         
                         <v-list dense>
                           <v-list-tile>
-                            <v-list-tile-content>ID</v-list-tile-content>
-                            <v-list-tile-content class="align-end orange-c">A1</v-list-tile-content>
+                            <v-list-tile-content class="width-18">ID</v-list-tile-content>
+                            <v-list-tile-content class="align-start orange-c width-50">A1</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
-                            <v-list-tile-content>Created</v-list-tile-content>
-                            <v-list-tile-content class="align-end">1/Jan/2021 13:00:00 AM</v-list-tile-content>
+                            <v-list-tile-content class="width-18">Created</v-list-tile-content>
+                            <v-list-tile-content class="align-start width-50">1/Jan/2021 13:00:00 AM</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
-                            <v-list-tile-content>Initiator</v-list-tile-content>
-                            <v-list-tile-content class="align-end orange-c">User1</v-list-tile-content>
+                            <v-list-tile-content class="width-18">Initiator</v-list-tile-content>
+                            <v-list-tile-content class="align-start orange-c width-50">User1</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
-                            <v-list-tile-content>Contract Id</v-list-tile-content>
-                            <v-list-tile-content class="align-end">1</v-list-tile-content>
+                            <v-list-tile-content class="width-18">Contract Id</v-list-tile-content>
+                            <v-list-tile-content class="align-start width-50">1</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
-                            <v-list-tile-content>Property</v-list-tile-content>
-                            <v-list-tile-content class="align-end">Mazaya</v-list-tile-content>
+                            <v-list-tile-content class="width-18">Property</v-list-tile-content>
+                            <v-list-tile-content class="align-start width-50">Mazaya</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
-                            <v-list-tile-content>Unit Type</v-list-tile-content>
-                            <v-list-tile-content class="align-end">2 Bed rooms</v-list-tile-content>
+                            <v-list-tile-content class="width-18">Unit Type</v-list-tile-content>
+                            <v-list-tile-content class="align-start width-50">2 Bed rooms</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
-                            <v-list-tile-content>Unit Number</v-list-tile-content>
-                            <v-list-tile-content class="align-end">1</v-list-tile-content>
+                            <v-list-tile-content class="width-18">Unit Number</v-list-tile-content>
+                            <v-list-tile-content class="align-start width-50">1</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
-                            <v-list-tile-content>Tenant</v-list-tile-content>
-                            <v-list-tile-content class="align-end orange-c">Mohamed</v-list-tile-content>
+                            <v-list-tile-content class="width-18">Tenant</v-list-tile-content>
+                            <v-list-tile-content class="align-start orange-c width-50">Mohamed</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
-                            <v-list-tile-content> Month</v-list-tile-content>
-                            <v-list-tile-content class="align-end">12</v-list-tile-content>
+                            <v-list-tile-content class="width-18"> Month</v-list-tile-content>
+                            <v-list-tile-content class="align-start width-50">12</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
-                            <v-list-tile-content> Year</v-list-tile-content>
-                            <v-list-tile-content class="align-end">2021</v-list-tile-content>
+                            <v-list-tile-content class="width-18"> Year</v-list-tile-content>
+                            <v-list-tile-content class="align-start width-50">2021</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
-                            <v-list-tile-content>Amount</v-list-tile-content>
-                            <v-list-tile-content class="align-end">200</v-list-tile-content>
+                            <v-list-tile-content class="width-18">Amount</v-list-tile-content>
+                            <v-list-tile-content class="align-start width-50">200</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
-                            <v-list-tile-content>Status</v-list-tile-content>
-                            <v-list-tile-content class="align-end">Paid</v-list-tile-content>
+                            <v-list-tile-content class="width-18">Status</v-list-tile-content>
+                            <v-list-tile-content class="align-start width-50">Paid</v-list-tile-content>
                           </v-list-tile>
                           <v-list-tile>
-                            <v-list-tile-content>Paid Date</v-list-tile-content>
-                            <v-list-tile-content class="align-end">2 Jan 2021 10:00:30 AM</v-list-tile-content>
+                            <v-list-tile-content class="width-18">Paid Date</v-list-tile-content>
+                            <v-list-tile-content class="align-start width-50">2 Jan 2021 10:00:30 AM</v-list-tile-content>
                           </v-list-tile>
                         </v-list>
 
@@ -513,5 +513,11 @@ export default {
 }
 .mt-36px{
   margin-top:36px;
+}
+.width-50{
+  width:50%
+}
+.width-10{
+  width:18%
 }
 </style>
