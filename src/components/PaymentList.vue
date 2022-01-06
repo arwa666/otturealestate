@@ -517,7 +517,7 @@ export default {
 .width-50{
   width:50%
 }
-.width-10{
+.width-18{
   width:18%
 }
 </style>
